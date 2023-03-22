@@ -30,12 +30,13 @@ export default function Admin() {
     <div className={styles.container}>
       <Stack spacing={3}>
         {!loading && tickets ? (
-          tickets.map((ticket, index) => (
-            <TicketListItem key={index} ticket={ticket} index={index} />
+          tickets.map((ticket) => (
+            <TicketListItem key={ticket._id} ticket={ticket} />
           ))
         ) : (
           <CircularProgress />
         )}
+        {!loading && !tickets && <div>There are no tickets at this time</div>}
       </Stack>
       {error && <div>{error}</div>}
     </div>

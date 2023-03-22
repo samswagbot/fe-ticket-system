@@ -24,7 +24,7 @@ export default function Home() {
     setForm({ ...form, [name]: value });
   };
 
-  const handleOnSubmit = async (e: any) => {
+  const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
     try {
@@ -64,7 +64,7 @@ export default function Home() {
           <Stack
             spacing={2}
             sx={{
-              width: "500px",
+              width: { xs: 450, sm: 500 },
             }}
           >
             <TextField
