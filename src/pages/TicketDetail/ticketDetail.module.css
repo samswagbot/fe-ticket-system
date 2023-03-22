@@ -1,0 +1,11 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.response {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
