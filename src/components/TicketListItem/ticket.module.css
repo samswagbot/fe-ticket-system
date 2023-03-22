@@ -13,7 +13,6 @@
 
 .details {
   margin-bottom: 15px;
-  display: flex;
 }
 
 .content {
@@ -23,4 +22,21 @@
 p {
   margin-top: 10px;
   margin-right: 20px;
+}
+
+.desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+  .content {
+    padding: 8px;
+  }
 }
