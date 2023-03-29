@@ -28,13 +28,16 @@ export default function Home() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      const req = await fetch("/api/tickets", {
-        method: "POST",
-        body: JSON.stringify(form),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
+      const req = await fetch(
+        "https://ticket-system.herokuapp.com/api/tickets",
+        {
+          method: "POST",
+          body: JSON.stringify(form),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
 
       if (req.ok) {
         setSubmitting(false);

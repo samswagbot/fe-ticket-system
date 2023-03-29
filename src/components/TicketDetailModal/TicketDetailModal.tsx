@@ -60,13 +60,16 @@ export default function TicketDetailModal({
       status: form.status,
     };
     try {
-      const req = await fetch(`/api/tickets/${ticket._id}`, {
-        method: "PUT",
-        body: JSON.stringify(updatedTicket),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
+      const req = await fetch(
+        `https://ticket-system.herokuapp.com/api/tickets/${ticket._id}`,
+        {
+          method: "PUT",
+          body: JSON.stringify(updatedTicket),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
 
       if (req.ok) {
         setSubmitting(false);

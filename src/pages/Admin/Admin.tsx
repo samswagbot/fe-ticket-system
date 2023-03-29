@@ -12,7 +12,9 @@ export default function Admin() {
   const getTickets = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/tickets");
+      const res = await fetch(
+        "https://ticket-system.herokuapp.com/api/tickets"
+      );
       const data = await res.json();
       setTickets(data);
     } catch (error) {

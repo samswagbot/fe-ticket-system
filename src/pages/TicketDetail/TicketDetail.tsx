@@ -25,7 +25,9 @@ export default function TicketDetail() {
   const getTicket = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/tickets/${id}`);
+      const res = await fetch(
+        `https://ticket-system.herokuapp.com/api/tickets/${id}`
+      );
       const data = await res.json();
       setTickets(data);
     } catch (error) {
