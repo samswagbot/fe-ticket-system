@@ -65,6 +65,9 @@ export default function TicketDetailModal({
         {
           method: "PUT",
           body: JSON.stringify(updatedTicket),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
         }
       );
 
